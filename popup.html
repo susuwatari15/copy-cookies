@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copy Cookies</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="titlebar">
+        <h1>Copy Cookies</h1>
+        <button id="settingsBtn" class="icon-btn" title="Cài đặt" aria-label="Cài đặt" aria-expanded="false">⚙️</button>
+      </div>
+      <p id="site" class="site">Đang tải…</p>
+    </header>
+
+    <div class="buttons">
+      <button id="copyBtn" class="btn btn-primary">
+        <span class="icon">⧉</span> Copy cookies
+      </button>
+      <button id="pasteBtn" class="btn btn-secondary">
+        <span class="icon">⤵</span> Paste cookies
+      </button>
+    </div>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+
+    <section id="settings" class="settings" hidden>
+      <h2>Cài đặt</h2>
+
+      <p class="group-label">Khi Copy</p>
+      <label class="opt">
+        <input type="checkbox" id="opt-includeSubdomains" />
+        <span>
+          <strong>Gồm subdomain &amp; domain cha</strong>
+          <em>Bắt cả cookie ở subdomain khác (vd api.…) và domain cha (.example.com).</em>
+        </span>
+      </label>
+      <label class="opt">
+        <input type="checkbox" id="opt-includePartitioned" />
+        <span>
+          <strong>Gồm cookie Partitioned (CHIPS)</strong>
+          <em>Lấy cả cookie bị ngăn hộc theo site top-level.</em>
+        </span>
+      </label>
+
+      <p class="group-label">Khi Paste</p>
+      <label class="opt">
+        <input type="checkbox" id="opt-remapOnPaste" />
+        <span>
+          <strong>Remap sang tab hiện tại</strong>
+          <em>Nếu dán sang host khác họ domain (vd localhost) thì gán cookie về host đó. Tắt = giữ domain gốc.</em>
+        </span>
+      </label>
+      <label class="opt">
+        <input type="checkbox" id="opt-familyFilter" />
+        <span>
+          <strong>Chỉ lấy cookie cùng họ app</strong>
+          <em>Khi remap, bỏ subdomain lạc &amp; khử trùng tên. Tắt = dán mọi cookie.</em>
+        </span>
+      </label>
+      <label class="opt">
+        <input type="checkbox" id="opt-forceInsecureOnHttp" />
+        <span>
+          <strong>Bỏ cờ Secure trên http</strong>
+          <em>Cho phép ghi cookie trên http://localhost. Tắt = giữ Secure (có thể set thất bại).</em>
+        </span>
+      </label>
+
+      <button id="resetBtn" class="link-btn">Khôi phục mặc định</button>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
