@@ -36,11 +36,11 @@ copy-cookies/
 ├── popup.html        # giao diện popup
 ├── popup.css         # style (theme Hextech / LMHT)
 ├── popup.js          # logic copy/paste cookie
-└── icons/            # icon 16/48/128
+└── icons/            # icon 16/48/128 (+ src/: SVG nguon & script sinh lai)
 ```
 
 ## Giao diện
-Popup dùng theme **Hextech** lấy cảm hứng từ client Liên Minh Huyền Thoại: nền navy–đen, viền vàng với 4 góc trang trí, chữ hoa giãn cách theo font display, checkbox hình thoi và hiệu ứng phát sáng xanh ngọc khi thao tác thành công. Toàn bộ style nằm trong `popup.css` (không phụ thuộc font/ảnh bên ngoài nên hợp CSP của MV3).
+Popup dùng theme **Hextech** lấy cảm hứng từ client Liên Minh Huyền Thoại: nền navy–đen, viền vàng với 4 góc trang trí, chữ hoa giãn cách theo font display, checkbox hình thoi và hiệu ứng phát sáng xanh ngọc khi thao tác thành công. Icon extension cũng theo tông này: khung lục giác vàng, lõi pha lê xanh ngọc (bản 16px rút gọn còn 1 lõi cho dễ nhìn trên thanh công cụ) — sinh lại bằng `python3 icons/src/generate-icons.py`. Toàn bộ style nằm trong `popup.css` (không phụ thuộc font/ảnh bên ngoài nên hợp CSP của MV3).
 
 ## Lưu ý
 - Chỉ hoạt động trên trang `http://` và `https://`.
