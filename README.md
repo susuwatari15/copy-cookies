@@ -34,10 +34,13 @@ Bấm icon ⚙ ở góc phải popup để bật/tắt các tính năng (lưu qu
 copy-cookies/
 ├── manifest.json     # cấu hình extension (MV3)
 ├── popup.html        # giao diện popup
-├── popup.css         # style
+├── popup.css         # style (theme Hextech / LMHT)
 ├── popup.js          # logic copy/paste cookie
 └── icons/            # icon 16/48/128
 ```
+
+## Giao diện
+Popup dùng theme **Hextech** lấy cảm hứng từ client Liên Minh Huyền Thoại: nền navy–đen, viền vàng với 4 góc trang trí, chữ hoa giãn cách theo font display, checkbox hình thoi và hiệu ứng phát sáng xanh ngọc khi thao tác thành công. Toàn bộ style nằm trong `popup.css` (không phụ thuộc font/ảnh bên ngoài nên hợp CSP của MV3).
 
 ## Lưu ý
 - Chỉ hoạt động trên trang `http://` và `https://`.
