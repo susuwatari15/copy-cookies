@@ -40,7 +40,7 @@ copy-cookies/
 ```
 
 ## Giao diện
-Popup dùng theme **Hextech** lấy cảm hứng từ client Liên Minh Huyền Thoại: nền navy–đen, viền vàng với 4 góc trang trí, chữ hoa giãn cách theo font display, checkbox hình thoi và hiệu ứng phát sáng xanh ngọc khi thao tác thành công. Icon extension cũng theo tông này: khung lục giác vàng, lõi pha lê xanh ngọc (bản 16px rút gọn còn 1 lõi cho dễ nhìn trên thanh công cụ) — sinh lại bằng `python3 icons/src/generate-icons.py`. Toàn bộ style nằm trong `popup.css` (không phụ thuộc font/ảnh bên ngoài nên hợp CSP của MV3).
+Popup dùng theme **Hextech** lấy cảm hứng từ client Liên Minh Huyền Thoại: nền navy–đen, viền vàng với 4 góc trang trí, chữ hoa giãn cách theo font display, checkbox hình thoi và hiệu ứng phát sáng xanh ngọc khi thao tác thành công. Icon extension dùng artwork Hextech cookie (`icons/src/cookies-icon.png`): cắt tròn quanh chiếc bánh, nền trong suốt để nổi trên cả thanh công cụ sáng lẫn tối; bản nhỏ được cắt sát hơn và làm nét thêm. Sinh lại bằng `python3 icons/src/generate-icons.py` (cần Pillow). Toàn bộ style nằm trong `popup.css` (không phụ thuộc font/ảnh bên ngoài nên hợp CSP của MV3).
 
 ## Lưu ý
 - Chỉ hoạt động trên trang `http://` và `https://`.
